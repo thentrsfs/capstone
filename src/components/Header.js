@@ -1,9 +1,9 @@
-import logo from '../assets/lemon-logo.svg';
+import Nav from './Nav';
 
 const Header = () => {
   return (
    <header>
-    <img src={logo} alt="logo" />
+    <Nav />
    </header>
   )
 }
