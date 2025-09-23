@@ -282,6 +282,12 @@ footer img {
 .footer-grid ul li {
   margin-bottom: 0.3rem;
 }
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 25rem;
+}
 
 /* Mobile */
 @media (max-width: 900px) {
@@ -296,6 +302,8 @@ footer img {
   }
   .hero {
     padding: 2rem 2rem;
+    flex-direction: column;
+    text-align: center;
   }
   .hero p {
     width: 100%;
@@ -307,6 +315,9 @@ footer img {
   }
   .specials {
     padding: 2rem;
+  }
+  .specials-header h2 {
+    font-size: 40px;
   }
   .specials-grid {
     flex-direction: column;
