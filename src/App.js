@@ -14,8 +14,13 @@ function App() {
 		guests: 1,
 		occasion: 'Birthday',
 	});
+  const [formErrors, setFormErrors] = useState({
+    date: '',
+    time: '',
+    guests: '',
+    occasion: '',
+  });
 	const [api, setApi] = useState(null);
-
 	 useEffect(() => {
     loadApi().then((loaded) => {
       setApi(loaded);
@@ -27,7 +32,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/booking' element={<BookingPage formData={formData} setFormData={setFormData} availableTimes={availableTimes} dispatch={dispatch} api={api}/>} />
+        <Route path='/booking' element={<BookingPage formData={formData} setFormData={setFormData} availableTimes={availableTimes} dispatch={dispatch} formErrors={formErrors} setFormErrors={setFormErrors} api={api}/>} />
 		<Route path='/confirmed' element={<ConfirmedBooking />} />
       </Routes>
       </BrowserRouter>

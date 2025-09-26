@@ -5,7 +5,7 @@ const ConfirmedBooking = () => {
   return (
     <>
         <Header />
-        <main>
+        <main className="confirmed-booking">
           <h2>Booking Confirmed!</h2>
           <p>Thank you for your reservation. We look forward to serving you!</p>
         </main>

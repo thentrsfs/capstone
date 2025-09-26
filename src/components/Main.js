@@ -12,105 +12,152 @@ import chefB from '../assets/chef.jpg';
 const Main = () => {
   return (
      <main>
-        <section className="hero">
-          <div className="hero-text">
-            <h1>Little Lemon</h1>
+        <section className="hero" aria-labelledby='hero-heading'>
+          <article aria-label='Hero text' className="hero-text">
+            <h1 id='hero-heading'>Little Lemon</h1>
             <h2>Chicago</h2>
             <p>
               We are a family owned Mediterranean restaurant, focused on
               traditional recipes served with a modern twist.
             </p>
             <button>Reserve a table</button>
-          </div>
-          <div className="hero-image">
+          </article>
+          <figure className="hero-image">
             <img src={restaurantFood} alt="Delicious food" />
-          </div>
+          </figure>
         </section>
 
         {/* Specials Section */}
-        <section className="specials" id="menu">
-          <div className='specials-header'>
-          <h2>This week’s specials!</h2>
+        <section className="specials" id="menu" aria-labelledby='specials-heading'>
+          <header aria-label='Specials header' className='specials-header'>
+          <h2 id='specials-heading'>This week’s specials!</h2>
           <button className="specials-btn">Online menu</button>
-          </div>
-          <div className="specials-grid">
-            <article className="card">
+          </header>
+
+          <ul className="specials-grid">
+            <li className="card">
+              <figure>
               <img src={greekSalad} alt="Greek Salad" />
-              <div className="card-content">
+              <figcaption className="card-content">
                 <h3>Greek Salad <span>$12.99</span></h3>
                 <p>
-                  Fresh salad with crispy lettuce, peppers, olives and feta
-                  cheese, seasoned with herbs.
+                  Fresh salad with crispy lettuce, peppers, olives and feta cheese, seasoned with herbs.
                 </p>
                 <a href="#order">Order a delivery</a>
-              </div>
-            </article>
-            <article className="card">
+              </figcaption>
+              </figure>
+            </li>
+            <li className="card">
+              <figure>
               <img src={bruschetta} alt="Bruschetta" />
-              <div className="card-content">
+              <figcaption className="card-content">
                 <h3>Bruschetta <span>$5.99</span></h3>
                 <p>
                   Toasted bread topped with garlic, tomatoes, and olive oil.
                 </p>
                 <a href="#order">Order a delivery</a>
-              </div>
-            </article>
-            <article className="card">
+              </figcaption>
+              </figure>
+            </li>
+            <li className="card">
+              <figure>
               <img src={lemonDessert} alt="Lemon Dessert" />
-              <div className="card-content">
+              <figcaption className="card-content">
                 <h3>Lemon Dessert <span>$4.99</span></h3>
                 <p>
                   Authentic homemade lemon dessert made fresh daily.
                 </p>
                 <a href="#order">Order a delivery</a>
-              </div>
-            </article>
-          </div>
+              </figcaption>
+              </figure>
+            </li>
+          </ul>
         </section>
 
         {/* Testimonials */}
-        <section className="testimonials">
-          <h2>Testimonials</h2>
-          <div className="testimonials-grid">
-            <article>
-              <p>⭐⭐⭐⭐⭐</p>
-              <img src={person1} alt="Person 1" />
-              <h4>Anna Lee</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </article>
-            <article>
-              <p>⭐⭐⭐⭐⭐</p>
-              <img src={person2} alt="Person 2" />
-              <h4>David Smith</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </article>
-            <article>
-              <p>⭐⭐⭐⭐⭐</p>
-              <img src={person3} alt="Person 3" />
-              <h4>Diana Ross</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </article>
-            <article>
-              <p>⭐⭐⭐⭐⭐</p>
-              <img src={person4} alt="Person 4" />
-              <h4>Adam Price</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </article>
-          </div>
-        </section>
+      <section className="testimonials" aria-labelledby="testimonials-heading">
+  <h2 id="testimonials-heading">Testimonials</h2>
+  <ul className="testimonials-grid">
+    <li>
+      <figure>
+        <span role="img" aria-label="5 star rating">⭐⭐⭐⭐⭐</span>
+        <img src={person1} alt="Portrait of Anna Lee" />
+        <figcaption>
+          <h3>Anna Lee</h3>
+          <blockquote>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </blockquote>
+        </figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <span role="img" aria-label="5 star rating">⭐⭐⭐⭐⭐</span>
+        <img src={person2} alt="Portrait of David Smith" />
+        <figcaption>
+          <h3>David Smith</h3>
+          <blockquote>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </blockquote>
+        </figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <span role="img" aria-label="5 star rating">⭐⭐⭐⭐⭐</span>
+        <img src={person3} alt="Portrait of Diana Ross" />
+        <figcaption>
+          <h3>Diana Ross</h3>
+          <blockquote>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </blockquote>
+        </figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <span role="img" aria-label="5 star rating">⭐⭐⭐⭐⭐</span>
+        <img src={person4} alt="Portrait of Adam Price" />
+        <figcaption>
+          <h3>Adam Price</h3>
+          <blockquote>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </blockquote>
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
+</section>
+
 
         {/* About Section */}
-        <section className="about" id="about">
-          <div className="about-text">
-            <h2>Little Lemon</h2>
+        <section className="about" id="about" aria-labelledby="about-heading">
+          <article className="about-text">
+            <h2 id="about-heading">Little Lemon</h2>
             <h3>Chicago</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
-          </div>
+          </article>
           <div className="about-image">
+            <figure>
             <img className='image1' src={marioadrian} alt="Mario and Adrian at Little Lemon" />
+            </figure>
+            <figure>
             <img className='image2' src={chefB} alt="Mario at Little Lemon" />
+            </figure>
           </div>
         </section>
       </main>

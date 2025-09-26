@@ -1,4 +1,4 @@
-// src/utils/times.js
+
 export const updateTimes = (api) => (state, action) => {
   switch (action.type) {
     case "UPDATE_TIMES":
